@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_flxS4NnVEeaipPOegnZHww" name="NewModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="_2V9GINnVEeaipPOegnZHww" name="DataAccessLayer">
+    <packagedElement xmi:type="uml:Package" xmi:id="_MKod8NnXEeaipPOegnZHww" name="DAOFactoryImp">
+      <packagedElement xmi:type="uml:Class" xmi:id="_XQPgcNnXEeaipPOegnZHww" name="ConfigLoader"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_arTSENnXEeaipPOegnZHww" name="Initlize"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dpAZUNnXEeaipPOegnZHww" name="Loging"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_hGo90NnXEeaipPOegnZHww" name="ConfigInterface"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_jXgNMNnXEeaipPOegnZHww" name="InitlizeInterface"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_mFOXsNnXEeaipPOegnZHww" name="LoggingInterface"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_rkzl0NnXEeaipPOegnZHww" name="ConfigStatus"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_uS_DUNnXEeaipPOegnZHww" name="InitStatus"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NCIUINp7Eeagba9qxuFMXA" name="DAOFactory" isAbstract="true">
+        <ownedOperation xmi:id="_VaR4kNqAEeagba9qxuFMXA" name="getDAOFactory">
+          <ownedParameter xmi:id="_gdB-4NqBEeagba9qxuFMXA" name="DAOEnums" type="_c56S4NqAEeagba9qxuFMXA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TYA4INp7Eeagba9qxuFMXA" name="MongoDAOFactory">
+        <generalization xmi:id="_kotj4Np7Eeagba9qxuFMXA" general="_NCIUINp7Eeagba9qxuFMXA"/>
+        <ownedAttribute xmi:id="_LEXIUNwaEeadG4t_YTRW_w" name="URL" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LEXIUdwaEeadG4t_YTRW_w"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LEXIUtwaEeadG4t_YTRW_w" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_O4Re0NwaEeadG4t_YTRW_w" name="Driver" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O4Re0dwaEeadG4t_YTRW_w"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O4Re0twaEeadG4t_YTRW_w" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_9OVpINwYEeadG4t_YTRW_w" name="getConnection" isStatic="true">
+          <ownedParameter xmi:id="_KmfWANwZEeadG4t_YTRW_w" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TxLmENp7Eeagba9qxuFMXA" name="CassandraDAOFactory">
+        <generalization xmi:id="_ng1AgNp7Eeagba9qxuFMXA" general="_NCIUINp7Eeagba9qxuFMXA"/>
+        <ownedOperation xmi:id="_Esm8ENwaEeadG4t_YTRW_w" name="getConnection" isStatic="true">
+          <ownedParameter xmi:id="_Esm8EdwaEeadG4t_YTRW_w" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
+        </ownedOperation>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_afF-gONNEeawMpzSVb6tcg" name="CassandraDAOFactory">
+          <generalization xmi:id="_afF-geNNEeawMpzSVb6tcg" general="_NCIUINp7Eeagba9qxuFMXA"/>
+          <ownedOperation xmi:id="_afF-guNNEeawMpzSVb6tcg" name="getConnection" isStatic="true">
+            <ownedParameter xmi:id="_afF-g-NNEeawMpzSVb6tcg" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
+          </ownedOperation>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3YyQUNp-Eeagba9qxuFMXA" name="MongoDAO">
+        <interfaceRealization xmi:id="_f6rxsNp_Eeagba9qxuFMXA" client="_3YyQUNp-Eeagba9qxuFMXA" supplier="_bBywINp_Eeagba9qxuFMXA" contract="_bBywINp_Eeagba9qxuFMXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5fs5gNp-Eeagba9qxuFMXA" name="CassandraDAO">
+        <interfaceRealization xmi:id="_if78sNp_Eeagba9qxuFMXA" client="_5fs5gNp-Eeagba9qxuFMXA" supplier="_bBywINp_Eeagba9qxuFMXA" contract="_bBywINp_Eeagba9qxuFMXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_72hm8Np-Eeagba9qxuFMXA" name="MySQLDAOFactory">
+        <generalization xmi:id="_72hm8dp-Eeagba9qxuFMXA" general="_NCIUINp7Eeagba9qxuFMXA"/>
+        <ownedOperation xmi:id="_CvFfcNwaEeadG4t_YTRW_w" name="getConnection" isStatic="true">
+          <ownedParameter xmi:id="_CvFfcdwaEeadG4t_YTRW_w" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AYzfUNp_Eeagba9qxuFMXA" name="MySQLDAO">
+        <interfaceRealization xmi:id="_hXZnUNp_Eeagba9qxuFMXA" client="_AYzfUNp_Eeagba9qxuFMXA" supplier="_bBywINp_Eeagba9qxuFMXA" contract="_bBywINp_Eeagba9qxuFMXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_QOBEgNp_Eeagba9qxuFMXA" client="_TYA4INp7Eeagba9qxuFMXA" supplier="_3YyQUNp-Eeagba9qxuFMXA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SESCkNp_Eeagba9qxuFMXA" client="_72hm8Np-Eeagba9qxuFMXA" supplier="_AYzfUNp_Eeagba9qxuFMXA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S5gaYNp_Eeagba9qxuFMXA" client="_TxLmENp7Eeagba9qxuFMXA" supplier="_5fs5gNp-Eeagba9qxuFMXA"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bBywINp_Eeagba9qxuFMXA" name="DAO"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_c56S4NqAEeagba9qxuFMXA" name="DAOFactories">
+        <ownedLiteral xmi:id="_QK07sNqBEeagba9qxuFMXA" name="MONGO"/>
+        <ownedLiteral xmi:id="_RX5y0NqBEeagba9qxuFMXA" name="CASSANDRA"/>
+        <ownedLiteral xmi:id="_TS5f4NqBEeagba9qxuFMXA" name="MYSQL"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_t6E_cNwZEeadG4t_YTRW_w" name="ConnectionType">
+        <ownedLiteral xmi:id="_wIjpMNwZEeadG4t_YTRW_w" name="MongoClient">
+          <specification xmi:type="uml:LiteralInteger" xmi:id="_wIjpMdwZEeadG4t_YTRW_w"/>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="_4yrgsNwZEeadG4t_YTRW_w" name="MysqlConnection"/>
+        <ownedLiteral xmi:id="_7FreENwZEeadG4t_YTRW_w" name="CassandraConnection"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_v25mkNwbEeadG4t_YTRW_w" client="_XQPgcNnXEeaipPOegnZHww" supplier="_TYA4INp7Eeagba9qxuFMXA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_AU6RINwcEeadG4t_YTRW_w" client="_XQPgcNnXEeaipPOegnZHww" supplier="_72hm8Np-Eeagba9qxuFMXA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_BUHrYNwcEeadG4t_YTRW_w" client="_XQPgcNnXEeaipPOegnZHww" supplier="_TxLmENp7Eeagba9qxuFMXA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hz96UONNEeawMpzSVb6tcg" name="RedisDAOFactory">
+        <generalization xmi:id="_KkKWYONOEeawMpzSVb6tcg" general="_NCIUINp7Eeagba9qxuFMXA"/>
+        <ownedOperation xmi:id="_ojr6oONNEeawMpzSVb6tcg" name="getConnection" isStatic="true">
+          <ownedParameter xmi:id="_ojr6oeNNEeawMpzSVb6tcg" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qfRdkONNEeawMpzSVb6tcg" name="RedisDAO"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_3SPZwONNEeawMpzSVb6tcg" client="_qfRdkONNEeawMpzSVb6tcg" supplier="_bBywINp_Eeagba9qxuFMXA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6J3uMONNEeawMpzSVb6tcg" client="_hz96UONNEeawMpzSVb6tcg" supplier="_qfRdkONNEeawMpzSVb6tcg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_CQ11UONOEeawMpzSVb6tcg" client="_XQPgcNnXEeaipPOegnZHww" supplier="_hz96UONNEeawMpzSVb6tcg"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
