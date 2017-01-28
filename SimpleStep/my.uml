@@ -30,18 +30,60 @@
         <ownedOperation xmi:id="_9OVpINwYEeadG4t_YTRW_w" name="getConnection" isStatic="true">
           <ownedParameter xmi:id="_KmfWANwZEeadG4t_YTRW_w" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
         </ownedOperation>
+        <ownedOperation xmi:id="_w1DgUOTAEeawMpzSVb6tcg" name="insertData">
+          <ownedParameter xmi:id="_eD7HIOTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_jEYJQOTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="_lzmIkOTBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_q12hgOTBEeawMpzSVb6tcg" name="updateData">
+          <ownedParameter xmi:id="_q12hgeTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_q12hguTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="_q12hg-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_xunwIOTBEeawMpzSVb6tcg" name="deleteData">
+          <ownedParameter xmi:id="_xunwIeTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_xunwI-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4m_WIOTBEeawMpzSVb6tcg" name="searchData">
+          <ownedParameter xmi:id="_4m_WIeTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_6Z6FQOTBEeawMpzSVb6tcg" name="data" direction="out"/>
+          <ownedParameter xmi:id="_4m_WIuTBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_TxLmENp7Eeagba9qxuFMXA" name="CassandraDAOFactory">
         <generalization xmi:id="_ng1AgNp7Eeagba9qxuFMXA" general="_NCIUINp7Eeagba9qxuFMXA"/>
+        <ownedAttribute xmi:id="_FuYqMOTCEeawMpzSVb6tcg" name="URL" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FuYqMeTCEeawMpzSVb6tcg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FuYqMuTCEeawMpzSVb6tcg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_FuYqM-TCEeawMpzSVb6tcg" name="Driver" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FuYqNOTCEeawMpzSVb6tcg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FuYqNeTCEeawMpzSVb6tcg" value="1"/>
+        </ownedAttribute>
         <ownedOperation xmi:id="_Esm8ENwaEeadG4t_YTRW_w" name="getConnection" isStatic="true">
           <ownedParameter xmi:id="_Esm8EdwaEeadG4t_YTRW_w" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
         </ownedOperation>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_afF-gONNEeawMpzSVb6tcg" name="CassandraDAOFactory">
-          <generalization xmi:id="_afF-geNNEeawMpzSVb6tcg" general="_NCIUINp7Eeagba9qxuFMXA"/>
-          <ownedOperation xmi:id="_afF-guNNEeawMpzSVb6tcg" name="getConnection" isStatic="true">
-            <ownedParameter xmi:id="_afF-g-NNEeawMpzSVb6tcg" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
-          </ownedOperation>
-        </nestedClassifier>
+        <ownedOperation xmi:id="__CahcOTBEeawMpzSVb6tcg" name="searchData">
+          <ownedParameter xmi:id="__CahceTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__CahcuTBEeawMpzSVb6tcg" name="data" direction="out"/>
+          <ownedParameter xmi:id="__Cahc-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__CbIgOTBEeawMpzSVb6tcg" name="updateData">
+          <ownedParameter xmi:id="__CbIgeTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__CbIguTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="__CbIg-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__CbIhOTBEeawMpzSVb6tcg" name="insertData">
+          <ownedParameter xmi:id="__CbIheTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__CbIhuTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="__CbIh-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__CbIiOTBEeawMpzSVb6tcg" name="deleteData">
+          <ownedParameter xmi:id="__CbIieTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__CbIiuTBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_3YyQUNp-Eeagba9qxuFMXA" name="MongoDAO">
         <interfaceRealization xmi:id="_f6rxsNp_Eeagba9qxuFMXA" client="_3YyQUNp-Eeagba9qxuFMXA" supplier="_bBywINp_Eeagba9qxuFMXA" contract="_bBywINp_Eeagba9qxuFMXA"/>
@@ -51,8 +93,37 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_72hm8Np-Eeagba9qxuFMXA" name="MySQLDAOFactory">
         <generalization xmi:id="_72hm8dp-Eeagba9qxuFMXA" general="_NCIUINp7Eeagba9qxuFMXA"/>
+        <ownedAttribute xmi:id="_FA4rAOTCEeawMpzSVb6tcg" name="URL" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FA4rAeTCEeawMpzSVb6tcg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FA4rAuTCEeawMpzSVb6tcg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_FA4rA-TCEeawMpzSVb6tcg" name="Driver" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FA4rBOTCEeawMpzSVb6tcg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FA4rBeTCEeawMpzSVb6tcg" value="1"/>
+        </ownedAttribute>
         <ownedOperation xmi:id="_CvFfcNwaEeadG4t_YTRW_w" name="getConnection" isStatic="true">
           <ownedParameter xmi:id="_CvFfcdwaEeadG4t_YTRW_w" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-vAdQOTBEeawMpzSVb6tcg" name="searchData">
+          <ownedParameter xmi:id="_-vAdQeTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_-vAdQuTBEeawMpzSVb6tcg" name="data" direction="out"/>
+          <ownedParameter xmi:id="_-vAdQ-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-vAdROTBEeawMpzSVb6tcg" name="updateData">
+          <ownedParameter xmi:id="_-vAdReTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_-vAdRuTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="_-vAdR-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-vAdSOTBEeawMpzSVb6tcg" name="insertData">
+          <ownedParameter xmi:id="_-vAdSeTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_-vAdSuTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="_-vAdS-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_-vAdTOTBEeawMpzSVb6tcg" name="deleteData">
+          <ownedParameter xmi:id="_-vAdTeTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="_-vAdTuTBEeawMpzSVb6tcg" name="status" direction="out"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_AYzfUNp_Eeagba9qxuFMXA" name="MySQLDAO">
@@ -79,14 +150,44 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_BUHrYNwcEeadG4t_YTRW_w" client="_XQPgcNnXEeaipPOegnZHww" supplier="_TxLmENp7Eeagba9qxuFMXA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_hz96UONNEeawMpzSVb6tcg" name="RedisDAOFactory">
         <generalization xmi:id="_KkKWYONOEeawMpzSVb6tcg" general="_NCIUINp7Eeagba9qxuFMXA"/>
+        <ownedAttribute xmi:id="_GCob4OTCEeawMpzSVb6tcg" name="URL" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GCob4eTCEeawMpzSVb6tcg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GCob4uTCEeawMpzSVb6tcg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_GCob4-TCEeawMpzSVb6tcg" name="Driver" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GCob5OTCEeawMpzSVb6tcg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GCob5eTCEeawMpzSVb6tcg" value="1"/>
+        </ownedAttribute>
         <ownedOperation xmi:id="_ojr6oONNEeawMpzSVb6tcg" name="getConnection" isStatic="true">
           <ownedParameter xmi:id="_ojr6oeNNEeawMpzSVb6tcg" name="Connection" type="_t6E_cNwZEeadG4t_YTRW_w" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__cGz0OTBEeawMpzSVb6tcg" name="searchData">
+          <ownedParameter xmi:id="__cGz0eTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__cGz0uTBEeawMpzSVb6tcg" name="data" direction="out"/>
+          <ownedParameter xmi:id="__cGz0-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__cGz1OTBEeawMpzSVb6tcg" name="updateData">
+          <ownedParameter xmi:id="__cGz1eTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__cGz1uTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="__cGz1-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__cGz2OTBEeawMpzSVb6tcg" name="insertData">
+          <ownedParameter xmi:id="__cGz2eTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__cGz2uTBEeawMpzSVb6tcg" name="data"/>
+          <ownedParameter xmi:id="__cGz2-TBEeawMpzSVb6tcg" name="status" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__cGz3OTBEeawMpzSVb6tcg" name="deleteData">
+          <ownedParameter xmi:id="__cGz3eTBEeawMpzSVb6tcg" name="key"/>
+          <ownedParameter xmi:id="__cGz3uTBEeawMpzSVb6tcg" name="status" direction="out"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_qfRdkONNEeawMpzSVb6tcg" name="RedisDAO"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_3SPZwONNEeawMpzSVb6tcg" client="_qfRdkONNEeawMpzSVb6tcg" supplier="_bBywINp_Eeagba9qxuFMXA"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_6J3uMONNEeawMpzSVb6tcg" client="_hz96UONNEeawMpzSVb6tcg" supplier="_qfRdkONNEeawMpzSVb6tcg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_CQ11UONOEeawMpzSVb6tcg" client="_XQPgcNnXEeaipPOegnZHww" supplier="_hz96UONNEeawMpzSVb6tcg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_aDZbgOTCEeawMpzSVb6tcg" client="_TYA4INp7Eeagba9qxuFMXA" supplier="_3YyQUNp-Eeagba9qxuFMXA"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>
